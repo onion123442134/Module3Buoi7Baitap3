@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+    background-color: #222;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    z-index: 1000;
+}
+
+header .logo {
+    font-weight: bold;
+}
+
+header nav a {
+    color: #ccc;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+header nav a.active,
+header nav a:hover {
+    color: white;
+    border-bottom: 2px solid white;
+}
+
+header .login {
+    color: #ccc;
+}
+
+/* Layout chính */
+.container {
+    display: flex;
+    margin-top: 70px;
+    padding: 20px;
+}
+
+.left {
+    width: 15%;
+    background: #f1f1f1;
+    padding: 20px;
+}
+
+.left a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+main {
+    width: 70%;
+    padding: 20px;
+}
+
+.right {
+    width: 15%;
+    background: #f1f1f1;
+    padding: 20px;
+}
+
+.ads {
+    background: white;
+    border: 1px solid #ccc;
+    padding: 40px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background: #444;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left, .right {
+        width: 100%;
+        order: 1;
+    }
+
+    main {
+        width: 100%;
+        order: 0;
+    }
+
+    header nav {
+        display: none;
+    }
+}
